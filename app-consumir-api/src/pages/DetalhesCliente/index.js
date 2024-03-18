@@ -5,7 +5,7 @@ import api from '../../services/api/api';
 
 
 
-export default function App() {
+export default function DetalhesCliente() {
   const [cliente, setCliente] = useState([]); //variavel cliente, conseguimos colocar coisas dentro da variavel cliente através do setCliente, useState é o tipo de dados que
   const [idCli, setIdCli] = useState(0);
   const [showAlert, setShowAlert] = useState(false);

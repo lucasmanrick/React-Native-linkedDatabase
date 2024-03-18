@@ -10,6 +10,10 @@ const Stack = createNativeStackNavigator();
 import Home from './src/pages/Home';
 import DetalhesCliente from './src/pages/DetalhesCliente';
 import NovoCliente from './src/pages/NovoCliente';
+import TodosClientes from './src/pages/TodosClientes';
+import DeletarCliente from './src/pages/DeletarCliente';
+import EditarCliente from './src/pages/EditarCliente';
+
 
 export default function App() {
   return (
@@ -19,6 +23,9 @@ export default function App() {
             <Stack.Screen name='Home' component={Home}/>
             <Stack.Screen options={{title:"Detalhes Clientes"}} name='DetalhesCliente' component={DetalhesCliente}/>
             <Stack.Screen options={{title:"Novo Cliente"}} name='NovoCliente' component={NovoCliente}/>
+            <Stack.Screen options={{title:"Verificar Clientes"}} name='TodosClientes' component={TodosClientes}/>
+            <Stack.Screen options={{title:"Deletar um cliente"}} name='DeletarCliente' component={DeletarCliente}/>
+            <Stack.Screen options={{title:"Editar clientes"}} name='EditarCliente' component={EditarCliente}/>
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>

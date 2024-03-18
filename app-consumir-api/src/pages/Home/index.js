@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput, Alert, Button } fr
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import NovoCliente from '../NovoCliente';
+import DeletarCliente from '../DeletarCliente';
 
 
 export default function Home() {
@@ -18,11 +19,20 @@ export default function Home() {
         navigation.navigate('NovoCliente')
     }
 
+    const navegaTodosClientes = () => {
+        navigation.navigate('TodosClientes')
+    }
+
+    const navegaDeletarCliente = () => {
+        navigation.navigate('DeletarCliente')
+    }
     return(
         <SafeAreaView style={styles.container}>
             <Text>Seja Bem vindo!</Text>
             <Button title='Abrir pesquisa por id' onPress={navegaPesquisaID}></Button>
             <Button title='Abrir Criação Novo Cliente' onPress={navegaNovoCliente}></Button>
+            <Button title='Abrir analise de todos clientes' onPress={navegaTodosClientes}></Button>
+            <Button title='Abrir Deletar clientes' onPress={navegaDeletarCliente}></Button>
         </SafeAreaView>
     )
 
